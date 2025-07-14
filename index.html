@@ -1,102 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <title>Hoto & INC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Company Career Pages</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
- <style>
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    .btn-dark-outline {
-      background-color: transparent;
-      border: 1px solid #00bcd4;
-      color: #00bcd4;
-    }
-    .btn-dark-outline:hover {
-      background-color: #00bcd4;
-      color: #000;
-    }
-    .card {
-      background-color: #1e1e1e;
-      border: 1px solid #2c2c2c;
-      border-radius: 0.5rem;
-    }
-    .form-control {
-      background-color: #2c2c2c;
-      color: #fff;
-      border: 1px solid #444;
-    }
-    .form-control::placeholder {
-      color: #888;
-    }
-    .list-group-item {
-      background-color: #2a2a2a;
-      border: none;
-      color: #ccc;
-    }
-    .neon-border {
-      border: 1px solid #00bcd4;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: #1b1b1b;
-    }
-  </style>
-</head>
-<body class="p-4">
-    <div class="text-center mb-4 p-3 rounded" style="background-color: #1f1f1f; border: 1px solid #2c2c2c;">
-  <h4 id="currentTime" class="mb-1 text-info"></h4>
-  <div id="currentDate" class="text-light small"></div>
-</div>
-
+<body>
 <div class="container">
+    <h1>Company Career Pages</h1>
 
-  <!-- HOTO Collapse -->
-  <p>
-    <a class="btn btn-dark-outline me-2 text-center" data-bs-toggle="collapse" href="#collapseHoto" role="button" aria-expanded="false" aria-controls="collapseHoto">
-      HOTO Task Manager
-    </a>
-  </p>
-  <div class="collapse" id="collapseHoto">
-    <div class="card card-body shadow-sm">
-      <div class="mb-3">
-        <label for="hoto" class="form-label">Enter HOTO Task:</label>
-        <div class="input-group">
-          <input type="text" id="hoto" class="form-control" placeholder="Enter task...">
-          <button onclick="addHoto()" class="btn btn-info text-dark">Add</button>
-          <button onclick="clearHoto()" class="btn btn-outline-info">Clear</button>
-        </div>
-      </div>
-      <ul id="showTask" class="list-group small"></ul>
+    <div class="form-container">
+      <input type="text" id="codeInput" placeholder="Enter 6-digit code" maxlength="6" />
+      <button onclick="checkCode()">Submit</button>
+      <p id="errorMsg" class="error-msg"></p>
+    </div>
+
+    <!-- Service-Based -->
+    <div id="serviceSection">
+      <h2>Service-Based Companies</h2>
+      <table id="serviceTable">
+        <thead><tr><th>Company Name</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>Accenture</td><td><a href="https://www.accenture.com/in-en/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Capgemini</td><td><a href="https://www.capgemini.com/in-en/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>TCS</td><td><a href="https://www.tcs.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Infosys</td><td><a href="https://www.infosys.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Cognizant</td><td><a href="https://careers.cognizant.com/in/en" target="_blank">Visit</a></td></tr>
+          <tr><td>Wipro</td><td><a href="https://careers.wipro.com" target="_blank">Visit</a></td></tr>
+          <tr><td>HCL Technologies</td><td><a href="https://www.hcltech.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Tech Mahindra</td><td><a href="https://careers.techmahindra.com" target="_blank">Visit</a></td></tr>
+          <tr><td>Deloitte</td><td><a href="https://www2.deloitte.com/in/en/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>EY</td><td><a href="https://www.ey.com/en_in/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>LTI Mindtree</td><td><a href="https://www.ltimindtree.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Mphasis</td><td><a href="https://careers.mphasis.com" target="_blank">Visit</a></td></tr>
+          <tr><td>UST Global</td><td><a href="https://www.ust.com/en/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Hexaware</td><td><a href="https://hexaware.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Zensar</td><td><a href="https://www.zensar.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Persistent</td><td><a href="https://www.persistent.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Birlasoft</td><td><a href="https://www.birlasoft.com/company/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Coforge</td><td><a href="https://careers.coforge.com" target="_blank">Visit</a></td></tr>
+          <tr><td>Atos Syntel</td><td><a href="https://atos.net/en/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Sonata Software</td><td><a href="https://www.sonata-software.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Cyient</td><td><a href="https://www.cyient.careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Valuelabs</td><td><a href="https://www.valuelabs.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Virtusa</td><td><a href="https://www.virtusa.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Happiest Minds</td><td><a href="https://www.happiestminds.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Xoriant</td><td><a href="https://www.xoriant.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>ITC Infotech</td><td><a href="https://www.itcinfotech.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>QuEST Global</td><td><a href="https://www.quest-global.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>KPIT Technologies</td><td><a href="https://www.kpit.com/careers" target="_blank">Visit</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Product-Based -->
+    <div id="productSection">
+      <h2>Product-Based Companies</h2>
+      <table id="productTable">
+        <thead><tr><th>Company Name</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>Trello (Atlassian)</td><td><a href="https://www.atlassian.com/company/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Zoho</td><td><a href="https://www.zoho.com/careers.html" target="_blank">Visit</a></td></tr>
+          <tr><td>Freshworks</td><td><a href="https://www.freshworks.com/careers/" target="_blank">Visit</a></td></tr>
+          <tr><td>Swiggy</td><td><a href="https://www.swiggy.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Zomato</td><td><a href="https://www.zomato.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Flipkart</td><td><a href="https://www.flipkart.com/jobs" target="_blank">Visit</a></td></tr>
+          <tr><td>Paytm</td><td><a href="https://www.paytm.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Ola</td><td><a href="https://www.olacabs.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Razorpay</td><td><a href="https://razorpay.com/careers/" target="_blank">Visit</a></td></tr>
+          <tr><td>BrowserStack</td><td><a href="https://www.browserstack.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>InMobi</td><td><a href="https://www.inmobi.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>RedBus</td><td><a href="https://www.redbus.in/aboutus/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Indiamart</td><td><a href="https://careers.indiamart.com" target="_blank">Visit</a></td></tr>
+          <tr><td>Cure.fit</td><td><a href="https://www.curefit.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Upstox</td><td><a href="https://www.upstox.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Tata Digital</td><td><a href="https://www.tatadigital.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Urban Company</td><td><a href="https://www.urbancompany.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Meesho</td><td><a href="https://www.meesho.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>CureMetrix</td><td><a href="https://www.curemetrix.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>HealthifyMe</td><td><a href="https://www.healthifyme.com/careers" target="_blank">Visit</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Others -->
+    <div id="othersSection">
+      <h2>Other Companies (Startups & Medium-Sized)</h2>
+      <table id="othersTable">
+        <thead><tr><th>Company Name</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>Intello Labs</td><td><a href="https://www.intellolabs.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Freecharge</td><td><a href="https://www.freecharge.in/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>CureMetrix</td><td><a href="https://www.curemetrix.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Digit Insurance</td><td><a href="https://www.digit.in/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>UpGrad</td><td><a href="https://www.upgrad.com/careers/" target="_blank">Visit</a></td></tr>
+          <tr><td>Postman</td><td><a href="https://www.postman.com/careers/" target="_blank">Visit</a></td></tr>
+          <tr><td>Udaan</td><td><a href="https://www.udaan.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>PhonePe</td><td><a href="https://www.phonepe.com/careers" target="_blank">Visit</a></td></tr>
+          <tr><td>Rivigo</td><td><a href="https://www.rivigo.com/careers" target="_blank">Visit</a></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- INC Collapse -->
-  <p class="mt-4">
-    <button class="btn btn-dark-outline text-center " type="button" data-bs-toggle="collapse" data-bs-target="#collapseInc" aria-expanded="false" aria-controls="collapseInc">
-      INC Task Manager
-    </button>
-  </p>
-  <div class="collapse" id="collapseInc">
-    <div class="card card-body shadow-sm">
-      <div class="mb-3">
-        <label for="inc" class="form-label">Enter INC Task:</label>
-        <div class="input-group">
-          <input type="text" id="inc" class="form-control" placeholder="Enter task...">
-          <button onclick="addInc()" class="btn btn-info text-dark">Add</button>
-          <button onclick="clearInc()" class="btn btn-outline-info">Clear</button>
-        </div>
-      </div>
-      <div id="showInc" class="list-group small"></div>
-    </div>
-  </div>
-
-</div>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
