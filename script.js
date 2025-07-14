@@ -1,6 +1,6 @@
  function checkCode() {
       const inputCode = document.getElementById('codeInput').value;
-      const correctCode = "123456";
+      const correctCode = "152811";
       const errorMsg = document.getElementById("errorMsg");
 
       if (inputCode === correctCode) {
